@@ -1,11 +1,24 @@
-import { makeSchema } from 'nexus'
-import { join } from 'path'
-import * as types from './graphql/types'
+const {gql} = require('apollo-server');
 
-export const schema = makeSchema({
-  types,
-  outputs: {
-    schema: join(process.cwd(), "schema.graphql"),
-    typegen: join(process.cwd(), "nexus-typegen.ts"),
-  },
-})
+const typeDefs = gql`
+  type Place {
+    latitude: Float!
+    longitude: Float!
+    placeName: String!
+    state: String!
+    stateAbbreviation: String!
+  }
+
+  type ZipCodeDetails {
+    country: String!
+    countryAbbreviation: String!
+    places: [Place]!
+    postCode: String!
+  }
+
+  type Query {
+    zipCodeDetails: ZipCodeDetails
+  }
+`;
+
+export default typeDefs;

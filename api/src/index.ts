@@ -1,8 +1,8 @@
 import { ApolloServer } from "apollo-server";
 
-import { schema } from "./schema";
+import typeDefs from "./schema";
 export const server = new ApolloServer({
-    schema,
+    typeDefs
 });
 
 const port = 3000;

@@ -1,24 +1,17 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Container } from "@mui/system";
+import "./App.css";
+import { useZipCodeDetailsQuery } from "./graphql/queries/GET_ZIP_CODE_DETAILS";
 
 function App() {
+  const { loading, data } = useZipCodeDetailsQuery({
+    countryCode: "US",
+    zipCode: "90210",
+  });
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Container maxWidth="sm">
+        {!loading ? data?.getZipCodeDetails.country : "Loading"}
+      </Container>
     </div>
   );
 }

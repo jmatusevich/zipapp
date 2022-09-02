@@ -1,4 +1,4 @@
-const {gql} = require('apollo-server');
+const { gql } = require("apollo-server");
 
 const typeDefs = gql`
   type Place {
@@ -17,7 +17,7 @@ const typeDefs = gql`
   }
 
   type Query {
-    zipCodeDetails(countryCode: String!, zipCode: String!): ZipCodeDetails
+    getZipCodeDetails(countryCode: String!, zipCode: String!): ZipCodeDetails
   }
 `;
 

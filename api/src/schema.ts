@@ -17,7 +17,7 @@ const typeDefs = gql`
   }
 
   type Query {
-    zipCodeDetails: ZipCodeDetails
+    zipCodeDetails(countryCode: String!, zipCode: String!): ZipCodeDetails
   }
 `;
 

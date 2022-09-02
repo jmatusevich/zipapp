@@ -28,7 +28,20 @@ export interface NexusGenScalars {
 }
 
 export interface NexusGenObjects {
+  Place: { // root type
+    latitude: number; // Float!
+    longitude: number; // Float!
+    placeName: string; // String!
+    state: string; // String!
+    stateAbbreviation: string; // String!
+  }
   Query: {};
+  ZipCodeDetails: { // root type
+    country: string; // String!
+    countryAbbreviation: string; // String!
+    places: Array<NexusGenRootTypes['Place'] | null>; // [Place]!
+    postCode: number; // Int!
+  }
 }
 
 export interface NexusGenInterfaces {
@@ -42,14 +55,40 @@ export type NexusGenRootTypes = NexusGenObjects
 export type NexusGenAllTypes = NexusGenRootTypes & NexusGenScalars
 
 export interface NexusGenFieldTypes {
+  Place: { // field return type
+    latitude: number; // Float!
+    longitude: number; // Float!
+    placeName: string; // String!
+    state: string; // String!
+    stateAbbreviation: string; // String!
+  }
   Query: { // field return type
     ok: boolean; // Boolean!
+  }
+  ZipCodeDetails: { // field return type
+    country: string; // String!
+    countryAbbreviation: string; // String!
+    places: Array<NexusGenRootTypes['Place'] | null>; // [Place]!
+    postCode: number; // Int!
   }
 }
 
 export interface NexusGenFieldTypeNames {
+  Place: { // field return type name
+    latitude: 'Float'
+    longitude: 'Float'
+    placeName: 'String'
+    state: 'String'
+    stateAbbreviation: 'String'
+  }
   Query: { // field return type name
     ok: 'Boolean'
+  }
+  ZipCodeDetails: { // field return type name
+    country: 'String'
+    countryAbbreviation: 'String'
+    places: 'Place'
+    postCode: 'Int'
   }
 }
 

@@ -2,6 +2,21 @@
 ### Do not make changes to this file directly
 
 
+type Place {
+  latitude: Float!
+  longitude: Float!
+  placeName: String!
+  state: String!
+  stateAbbreviation: String!
+}
+
 type Query {
   ok: Boolean!
+}
+
+type ZipCodeDetails {
+  country: String!
+  countryAbbreviation: String!
+  places: [Place]!
+  postCode: Int!
 }

@@ -20,7 +20,6 @@ export class ZipAPIDataSource extends RESTDataSource {
     try {
       return this.reducers.reduceDetails(rawDetails);
     } catch (error) {
-      console.log(error);
       return null;
     }
   }

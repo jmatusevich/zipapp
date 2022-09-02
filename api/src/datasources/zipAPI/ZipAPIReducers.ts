@@ -32,7 +32,6 @@ export class ZipAPIReducers {
       !rawPlaces.every((aRawPlace) => {
         //check place by place that the keys match or return null
         const rawKeys = Object.keys(aRawPlace);
-        console.log(rawKeys);
         return [
           "place name",
           "longitude",

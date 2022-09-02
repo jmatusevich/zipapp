@@ -40,7 +40,7 @@ export interface NexusGenObjects {
     country: string; // String!
     countryAbbreviation: string; // String!
     places: Array<NexusGenRootTypes['Place'] | null>; // [Place]!
-    postCode: number; // Int!
+    postCode: string; // String!
   }
 }
 
@@ -69,7 +69,7 @@ export interface NexusGenFieldTypes {
     country: string; // String!
     countryAbbreviation: string; // String!
     places: Array<NexusGenRootTypes['Place'] | null>; // [Place]!
-    postCode: number; // Int!
+    postCode: string; // String!
   }
 }
 
@@ -88,7 +88,7 @@ export interface NexusGenFieldTypeNames {
     country: 'String'
     countryAbbreviation: 'String'
     places: 'Place'
-    postCode: 'Int'
+    postCode: 'String'
   }
 }
 

@@ -18,5 +18,5 @@ type ZipCodeDetails {
   country: String!
   countryAbbreviation: String!
   places: [Place]!
-  postCode: Int!
+  postCode: String!
 }

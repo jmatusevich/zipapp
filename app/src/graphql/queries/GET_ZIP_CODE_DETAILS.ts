@@ -1,4 +1,4 @@
-import { gql, useQuery } from "@apollo/client";
+import { gql, useLazyQuery, useQuery } from "@apollo/client";
 import {
   getZipCodeDetailsData,
   getZipCodeDetailsVars,
@@ -25,7 +25,7 @@ export function useZipCodeDetailsQuery({
   countryCode,
   zipCode,
 }: getZipCodeDetailsVars) {
-  return useQuery<getZipCodeDetailsData, getZipCodeDetailsVars>(
+  return useLazyQuery<getZipCodeDetailsData, getZipCodeDetailsVars>(
     GET_ROCKET_INVENTORY,
     {
       variables: { countryCode, zipCode },

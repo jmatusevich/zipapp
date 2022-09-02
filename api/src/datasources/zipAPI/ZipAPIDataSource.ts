@@ -1,4 +1,5 @@
 import { RESTDataSource } from "apollo-datasource-rest";
+import { GetZipCondeDetailsArgs } from "../../types/GetZipCodeDetailsArgs";
 import { ZipAPIReducers } from "./ZipAPIReducers";
 
 export class ZipAPIDataSource extends RESTDataSource {
@@ -12,10 +13,7 @@ export class ZipAPIDataSource extends RESTDataSource {
   public async getZipCodeDetails({
     countryCode,
     zipCode,
-  }: {
-    countryCode: string;
-    zipCode: string;
-  }) {
+  }: GetZipCondeDetailsArgs) {
     const rawDetails = await this.get(
       `${encodeURIComponent(countryCode)}/${encodeURIComponent(zipCode)}`
     );

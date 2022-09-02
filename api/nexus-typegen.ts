@@ -63,7 +63,7 @@ export interface NexusGenFieldTypes {
     stateAbbreviation: string; // String!
   }
   Query: { // field return type
-    ok: boolean; // Boolean!
+    zipCodeDetails: NexusGenRootTypes['ZipCodeDetails'] | null; // ZipCodeDetails
   }
   ZipCodeDetails: { // field return type
     country: string; // String!
@@ -82,7 +82,7 @@ export interface NexusGenFieldTypeNames {
     stateAbbreviation: 'String'
   }
   Query: { // field return type name
-    ok: 'Boolean'
+    zipCodeDetails: 'ZipCodeDetails'
   }
   ZipCodeDetails: { // field return type name
     country: 'String'

@@ -12,6 +12,8 @@
 
 - Make the app handle transitions (like showing a new result) more gracefully
   - Implement animated transitions
+- Make the loading state more visible
+  - Currently it's just too subtle
 - Validate zip code ranges (per the (zippopotam docs)[https://www.zippopotam.us/#where])
   - mark the zipcode field with red when the value is outside the range
   - potentially check the content type of this field (e.g. not allow letters if the country uses only numbers)

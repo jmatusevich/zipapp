@@ -40,7 +40,13 @@ export default function ZipDetailsCard({
           {getFlagEmoji(countryAbbreviation)} {country} ({countryAbbreviation})
           - {postCode}
         </Typography>
-        {PlacesItems}
+        <Box
+          sx={{
+            "& > :not(style)": { mt: 1, width: "100%" },
+          }}
+        >
+          {PlacesItems}
+        </Box>
       </CardContent>
     </Card>
   );

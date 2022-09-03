@@ -31,7 +31,7 @@ function ZipCodeQueryView() {
     } else {
       setShowErrorArgs(lastSearchArgs);
     }
-  }, [data, lastSearchArgs]);
+  }, [data, lastSearchArgs, addToHistory]);
 
   const onClear = useCallback(() => {
     setShowErrorArgs(null);

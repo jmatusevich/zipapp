@@ -17,19 +17,19 @@ export function useSearchHistory() {
 
   const addToHistory = useCallback(
     (item: ZipCodeDetails) => {
-      setSearchHistory([item, ...searchHistory].slice(0, 5));
+      setSearchHistory((history) => [item, ...history].slice(0, 5));
     },
-    [searchHistory, setSearchHistory]
+    [setSearchHistory]
   );
 
   const clearHistory = useCallback(() => {
     setSearchHistory([]);
-  }, [searchHistory, setSearchHistory]);
+  }, [setSearchHistory]);
 
   useEffect(() => {
     if (initialized)
       localStorage.setItem("search_history", JSON.stringify(searchHistory));
-  }, [searchHistory]);
+  }, [searchHistory, initialized]);
 
   return [searchHistory, addToHistory, clearHistory] as const;
 }

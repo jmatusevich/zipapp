@@ -95,7 +95,7 @@ export function ZipCodeSearchForm({
         />
         <TextField
           id="zipcode_field"
-          label="ZipCode"
+          label="Zip Code"
           variant="outlined"
           value={zipCode}
           sx={{ width: "25%" }}

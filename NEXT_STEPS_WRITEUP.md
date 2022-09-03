@@ -17,6 +17,7 @@
 - Validate zip code ranges (per the (zippopotam docs)[https://www.zippopotam.us/#where])
   - mark the zipcode field with red when the value is outside the range
   - potentially check the content type of this field (e.g. not allow letters if the country uses only numbers)
+- Find and consolidate duplicate component stylings
 
 ## Deployment Strategy
 

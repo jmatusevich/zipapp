@@ -7,7 +7,7 @@ export interface ZipCodePlace {
 }
 
 export interface ZipCodeDetails {
-  postalCode: string;
+  postCode: string;
   country: string;
   countryAbbreviation: string;
   places: ZipCodePlace[];

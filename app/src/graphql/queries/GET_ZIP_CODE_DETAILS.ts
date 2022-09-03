@@ -1,10 +1,10 @@
-import { gql, useLazyQuery, useQuery } from "@apollo/client";
+import { gql, useLazyQuery } from "@apollo/client";
 import {
   getZipCodeDetailsData,
   getZipCodeDetailsVars,
 } from "../types/getZipCodeDetailsTypes";
 
-export const GET_ROCKET_INVENTORY = gql`
+export const GET_ZIP_CODE_DETAILS = gql`
   query GetZipCodeDetails($countryCode: String!, $zipCode: String!) {
     getZipCodeDetails(countryCode: $countryCode, zipCode: $zipCode) {
       country
@@ -21,14 +21,8 @@ export const GET_ROCKET_INVENTORY = gql`
   }
 `;
 
-export function useZipCodeDetailsQuery({
-  countryCode,
-  zipCode,
-}: getZipCodeDetailsVars) {
+export function useZipCodeDetailsQuery() {
   return useLazyQuery<getZipCodeDetailsData, getZipCodeDetailsVars>(
-    GET_ROCKET_INVENTORY,
-    {
-      variables: { countryCode, zipCode },
-    }
+    GET_ZIP_CODE_DETAILS
   );
 }

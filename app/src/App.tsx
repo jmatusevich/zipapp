@@ -1,7 +1,6 @@
 import { CssBaseline } from "@mui/material";
 import { Container } from "@mui/system";
 import "./App.css";
-import { useZipCodeDetailsQuery } from "./graphql/queries/GET_ZIP_CODE_DETAILS";
 import ZipCodeQueryView from "./views/ZipCodeQueryView";
 
 function App() {

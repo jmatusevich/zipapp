@@ -12,3 +12,8 @@
 
 - Run `npm run start-dev`, this will start and join the outputs from the react app and the graphql node api
 - Go to `http://localhost:3000/` (if it didn't go there on its own)
+
+## Testing
+
+- Run `npm run test` from the root directory of the project
+  - This will currently only run `npm run test` on API, but can be expanded for frontend / e2e tests

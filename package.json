@@ -5,8 +5,10 @@
   "proxy": "http://localhost:4000",
   "scripts": {
     "server-dev": "cd ./api && npm run dev",
+    "server-test": "cd ./api && npm run test",
     "app-dev": "cd ./app && npm run start",
     "start-dev": "npm run server-dev & npm run app-dev",
+    "test": "npm run server-test",
     "postinstall": "cd ./app && npm install && cd ../api && npm install"
   }
 }
